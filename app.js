@@ -50,7 +50,7 @@ app.use('/events', express.static(path.resolve('views', 'events')));
 app.use('/productos', express.static(path.resolve('views', 'products')));
 
 //Cliente
-app.use('/home', express.static(path.resolve('views', 'home')));
+app.use('/', express.static(path.resolve('views', 'home')));
 app.use('/comprar', express.static(path.resolve('views', 'comprar')));
 app.use('/:id', express.static(path.resolve('views', 'details')));
 app.use('/eventos', express.static(path.resolve('views', 'eventos')));
