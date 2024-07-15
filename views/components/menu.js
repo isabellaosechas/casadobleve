@@ -88,7 +88,7 @@ const logout = document.querySelector('#log-out');
 logout.addEventListener('click', async e => {
     try {
         await axios.get('/api/logout');
-        window.location.pathname = '/home'
+        window.location.pathname = '/'
     } catch (error) {
         console.log(error);
     }

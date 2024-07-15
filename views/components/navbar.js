@@ -24,7 +24,7 @@ const createNavbarClient = () => {
 
           <!-- Logo -->
           <div class=" flex items-stretch ml-8 md:ml-0 md:mr-4 justify-center md:justify-start text-center">
-          <a class="flex justify-center md:justify-start" href="/home">
+          <a class="flex justify-center md:justify-start" href="/">
           <img class="w-1/6 md:w-1/4 flex justify-center" src="/images/Logo.png" alt="LOGO">
           </a>  
           </div>  
