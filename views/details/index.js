@@ -12,7 +12,7 @@ producto = data;
 productoDetalles.innerHTML=`
  <div class="">
           <div class="">
-            <img class=" " src="http://localhost:3003/uploads/${producto.image}" alt="">
+            <img class=" " src="http://casadobleve.onrender.com/uploads/${producto.image}" alt="">
           </div>
           <!-- Datos -->
             <div class="flex flex-row items-center mx-4 justify-between bg-primary-background text-primary-text section-x-padding lg:col-span-5">
