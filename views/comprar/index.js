@@ -9,7 +9,7 @@ const renderProducts = (products) => {
       lista.id = product._id;
       lista.innerHTML = `
       <div id="producto-individual" class="bg-white h-90 outline cursor-pointer outline-black outline-1">
-                <img src="http://localhost:3003/uploads/${product.image}" class="w-96 h-64 sm:h-96 lg:h-[28rem]"/>
+                <img src="http://casadobleve.onrender.com/uploads/${product.image}" class="w-96 h-64 sm:h-96 lg:h-[28rem]"/>
                 <div class="px-4 py-3 flex flex-row justify-between items-center">
                     <p class="text-lg font-bold text-black truncate block capitalize">${product.name}</p>
                     <div class="flex items-center">
