@@ -4,15 +4,21 @@ const pageUrlArray = pageUrl.split('/');
 const id = pageUrlArray[3]
 
 let producto = [];
+let carrito = {
+  products: [],
+  user: false,
+  pago: false,
+};
 
 // Conseguir id del producto
 const { data } = await axios.get(`/api/products/${id}`);
 producto = data;
+console.log(producto._id);
 
 productoDetalles.innerHTML=`
  <div class="">
           <div class="">
-            <img class=" " src="http://casadobleve.onrender.com/uploads/${producto.image}" alt="">
+            <img class=" " src="/uploads/${producto.image}" alt="">
           </div>
           <!-- Datos -->
             <div class="flex flex-row items-center mx-4 justify-between bg-primary-background text-primary-text section-x-padding lg:col-span-5">
@@ -23,21 +29,16 @@ productoDetalles.innerHTML=`
                 <p>${producto.description}</p>
             </div>
             <!-- Cantidad -->
-            <div class="mt-8 mx-4 flex-col flex gap-2">
-                <label class="">Cantidad:</label>
-                <div class="relative flex items-center max-w-[8rem]">
-                    <button type="button" id="decrement-button" data-input-counter-decrement="quantity-input" class="bg-orange-50 border border-gray-300 rounded p-3 h-11 focus:outline-none">
-                        <svg class="w-3 h-3 text-gray-900 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"/>
-                        </svg>
-                    </button>
-                    <input type="text" id="quantity-input" data-input-counter aria-describedby="helper-text-explanation" class="bg-orange-50 border-x-0 border-gray-300 h-11 text-center text-gray-900 text-sm block w-full py-2.5 " placeholder="1" required />
-                    <button type="button" id="increment-button" data-input-counter-increment="quantity-input" class="bg-orange-50 border border-gray-300 rounded p-3 h-11 focus:outline-none">
-                        <svg class="w-3 h-3 text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-                        </svg>
-                    </button>
-                </div>
+           <div class="custom-number-input h-10 w-32">
+  <div id="seccion-cantidad" class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
+    <button id="decrement" class=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+      <span class="m-auto text-2xl font-thin">−</span>
+    </button>
+    <input type="number" id="cantidad" class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700" name="custom-input-number" value="1"></input>
+  <button id="add" class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+    <span class="m-auto text-2xl font-thin">+</span>
+  </button>
+</div>
         
         <!-- Cierra el div -->
             </div> 
@@ -51,21 +52,31 @@ productoDetalles.innerHTML=`
             </div>  
      </div> 
 `;
+//Cantidad funcionamiento
+const restar = document.querySelector('#decrement');
+const add = document.querySelector('#add');
+const cantidadInput = document.querySelector('#cantidad')
+let value = Number(cantidadInput.value);
+const cantidadSection = document.querySelector('#seccion-cantidad');
+cantidadSection.addEventListener('click'), e => ({
+})
 
+//Anadir al carrito
 const addForm = document.querySelector('#add-form');
 addForm.addEventListener('submit', async e =>{
     e.preventDefault();
-  try {
-    const newCart = {
-      products: producto.id,
+    const product = product._id
+    const qnty = 1;
+    const oldProducts = carrito.products;
+    const newProducts = oldProducts.concat({ qy: qnty, productId: product });
+    carrito = {...carrito, products: newProducts};
+    if (user) {
+      carrito = {...carrito, user: '52523532'}
     }
-    const { data } = await axios.post('/api/cart', newCart);
-    console.log(data);
 
-  } catch (error) {
-    console.log("no se ha podido agregar");
-    console.log(error);
-  }
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+
+  
 
 
 })

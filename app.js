@@ -61,7 +61,7 @@ app.use(morgan('tiny'));
 
 
 //Rutas Backend
-app.use('/api/products', userExtractor, productRouter);
+app.use('/api/products', productRouter);
 app.use('/api/events', eventRouter);
 app.use('api/cart', cartRouter);
 app.use('/api/users', usersRouter);
