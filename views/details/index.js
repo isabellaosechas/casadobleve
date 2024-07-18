@@ -1,7 +1,7 @@
 const productoDetalles = document.querySelector('#detalles-producto');
 const pageUrl = window.location.href;
 const pageUrlArray = pageUrl.split('/');
-const id = pageUrlArray[3]
+const id = pageUrlArray[4]
 
 let producto = [];
 let carrito = {
@@ -13,8 +13,8 @@ let carrito = {
 // Conseguir id del producto
 const { data } = await axios.get(`/api/products/${id}`);
 producto = data;
-console.log(producto._id);
 
+//Render product
 productoDetalles.innerHTML=`
  <div class="">
           <div class="">
@@ -53,29 +53,40 @@ productoDetalles.innerHTML=`
      </div> 
 `;
 //Cantidad funcionamiento
-const restar = document.querySelector('#decrement');
-const add = document.querySelector('#add');
 const cantidadInput = document.querySelector('#cantidad')
 let value = Number(cantidadInput.value);
+
 const cantidadSection = document.querySelector('#seccion-cantidad');
-cantidadSection.addEventListener('click'), e => ({
-})
+cantidadSection.addEventListener('click', e => {
+  const restar = e.target.closest('#decrement');
+  const add = e.target.closest('#add');
+  if (restar){
+    value--;
+    cantidadInput.value = value;
+  } else if (add) {
+    value++;
+    cantidadInput.value = value;
+  }
+}); 
+
+const user = JSON.parse(localStorage.getItem('currentUser'));
 
 //Anadir al carrito
 const addForm = document.querySelector('#add-form');
 addForm.addEventListener('submit', async e =>{
     e.preventDefault();
-    const product = product._id
-    const qnty = 1;
+    const product = producto
+    const qnty = cantidadInput.value;
     const oldProducts = carrito.products;
-    const newProducts = oldProducts.concat({ qy: qnty, productId: product });
+    const newProducts = oldProducts.concat({ qy: qnty, product: product });
     carrito = {...carrito, products: newProducts};
     if (user) {
-      carrito = {...carrito, user: '52523532'}
-    }
+      carrito = {...carrito, user: user.id}
+    };
 
     localStorage.setItem('carrito', JSON.stringify(carrito));
-
+    console.log(carrito);
+    
   
 
 

@@ -54,6 +54,25 @@ productRouter.get('/:id', async (request, response) => {
   });
   ;
 
+  //Comprar producto
+  // productRouter.get('comprar/:id', async (request, response) => {
+  //   const productId = request.params.id;
+  
+  //   try {
+  //     const product = await Product.findById(productId);
+  
+  //     if (product) {
+  //       return response.json(product); // Send product details as JSON
+  //     } else {
+  //       return response.status(404).send('Product not found');
+  //     }
+  //   } catch (error) {
+  //     console.error(error);
+  //     return response.status(500).send('Internal Server Error');
+  //   }
+  // });
+  // ;
+
 //Actualizar Producto
 productRouter.patch('/:id', async (request, response) => {
     const updateParams = {

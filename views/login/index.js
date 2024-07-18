@@ -10,7 +10,8 @@ form.addEventListener('submit', async e => {
         email: emailInput.value,
         password: passwordInput.value
     }
-    await axios.post('/api/login', user);
+    const { data } = await axios.post('/api/login', user);
+    localStorage.setItem('currentUser', JSON.stringify(data));
     window.location.pathname = `/productos`
     } catch (error) {
         console.log(error.response.data.error);

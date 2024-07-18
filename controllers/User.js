@@ -5,6 +5,8 @@ const jwt = require('jsonwebtoken');
 const nodemailer = require('nodemailer');
 const { PAGE_URL } = require('../config.js');
 
+
+//Post user
 usersRouter.post('/', async (request, response) => {
     const { name, email, phone, password } = request.body;
 
@@ -45,6 +47,7 @@ usersRouter.post('/', async (request, response) => {
 
 });
 
+//Confirmation
 usersRouter.patch('/:id/:token', async (request, response) => {
     try {
         const token = request.params.token;
@@ -86,3 +89,14 @@ usersRouter.patch('/:id/:token', async (request, response) => {
 
 });
 module.exports = usersRouter;
+
+//Get user
+usersRouter.get('/:id', async (request, response) => {
+    const id = request.params.id;
+    const user = await User.findById(id);
+    if (user) {
+        return response.json(user);
+        } else {
+            return response.status(404).json({ error: 'Usuario no encontrado' });
+            }
+            });

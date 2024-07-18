@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="icon" href="/images/logo.png" type="image/x-icon">
+    <title>Casadobleve || Carrito</title>
+</head>
+<body>
+    <div class="flex sticky gap-4 z-10 flex-col items-center  justify-center text-center bg-[#E7782D] text-orange-50 px-6 py-2 top-0 right-0 left-0">
+        <p class="truncate text-sm animate-loop-scroll"> ✹ ENVIOS NACIONALES GRATIS A PARTIR DE 120$ ✹ </p>
+    </div>
+    <!-- Nav Bar -->
+     <nav id="navbar" class="fixed z-10 section-x-padding flex flex-row items-center justify-between py-2 left-0 right-0 bg-orange-50 text-black text-sm max-w-full mx-auto">  
+     </nav>
+
+    <!-- Contenido -->
+    <div class="bg-gray-100 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col mt-16 md:flex-row gap-4">
+                <div class="md:w-3/4">
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-4">
+                        <table class="w-full">
+                            <thead>
+                                <tr>
+                                    <th class="text-left font-semibold">Product</th>
+                                    <th class="text-left font-semibold">Price</th>
+                                    <th class="text-left font-semibold">Quantity</th>
+                                    <th class="text-left font-semibold">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-body">
+                                <!-- More product rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="md:w-1/4">
+                    <div id="resumen" class="bg-white rounded-lg shadow-md p-6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <script src="../components/navbar.js"></script>
+     <script type="module" src="index.js"></script>
+</body>
+</html>

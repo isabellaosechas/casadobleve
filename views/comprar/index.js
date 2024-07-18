@@ -34,5 +34,5 @@ const renderProducts = (products) => {
 productList.addEventListener('click', async e => {
     const productoIndividual = e.target.closest('#producto-individual')
     const id = productoIndividual.parentElement.id;
-    window.location.pathname = `/${id}`;
+    window.location.pathname = `/comprar/${id}`;
 })

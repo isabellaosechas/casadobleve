@@ -31,7 +31,7 @@ loginRouter.post('/', async (request, response) => {
         httpOnly: true
     });
 
-    return response.sendStatus(200);
+    return response.status(200).send(userExist);
 });
 
 module.exports = loginRouter;
