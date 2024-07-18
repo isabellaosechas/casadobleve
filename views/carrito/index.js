@@ -1,8 +1,11 @@
 
 const tableBody = document.querySelector('#table-body');
 const resumen = document.querySelector('#resumen');
-let carrito = [];
-let carritoItems = []
+let carrito = {
+  products: [],
+  user: false,
+  pago: false,
+}
 let total = 0;
 
 //Resumen 
@@ -31,28 +34,37 @@ const crearResumen = () => {
 };
 crearResumen()
 
+// pro.reduce(acc, next => acc + next.price, 0)
 //Mostrar Carrito
 const renderCart = () => {
     tableBody.innerHTML = '';
-    carritoItems.forEach(item => {
+    const num = Number('10$'.replace('$', ''));
+
+    // const total = carritoItems.reduce((acc, next) => acc + Number(next.price.replace('$', '')), 0);
+    // console.log(carrito);
+    // console.log(subtotal);
+    carrito.products.forEach(item => {
+        const subtotal = item.qnty * Number(item.price.replace('$', ''));
+        console.log(subtotal);
         const tr = document.createElement('tr');
+        tr.id = item._id;
         tr.innerHTML = `
         <tr>
                                     <td class="py-4">
                                         <div class="flex items-center">
-                                            <img class="h-16 w-16 mr-4" src="/uploads/${item.product.image}" alt="Product image">
-                                            <span class="font-semibold">${item.product.name}</span>
+                                            <img class="h-16 w-16 mr-4" src="/uploads/${item.image}" alt="Product image">
+                                            <span class="font-semibold">${item.name}</span>
                                         </div>
                                     </td>
-                                    <td class="py-4">${item.product.price}</td>
+                                    <td class="py-4">${item.price}</td>
                                     <td class="py-4">
                                         <div id="seccion-cantidad" class="flex items-center">
                                             <button id="decrement" class="border rounded-md py-2 px-4 mr-2">-</button>
-                                            <span id="cantidad" class="text-center w-8">${item.qy}</span>
+                                            <span id="cantidad" class="text-center w-8">${item.qnty}</span>
                                             <button id="add" class="border rounded-md py-2 px-4 ml-2">+</button>
                                         </div>
                                     </td>
-                                    <td class="py-4"></td>
+                                    <td class="py-4">${subtotal}</td>
                                 </tr>
         `;
         tableBody.append(tr);
@@ -66,29 +78,52 @@ const renderCart = () => {
     if (carritoStringArray) {
       carrito = JSON.parse(carritoStringArray);  
     }
-    carritoItems = carrito.products;
     renderCart();
     
   })();
 
   
 //Cantidad funcionamiento
-
-const cantidadInput = document.querySelector('#cantidad')
-let value = Number(cantidadInput.innerHTML);
-const cantidadSection = document.querySelector('#seccion-cantidad');
-cantidadSection.addEventListener('click', e => {
+tableBody.addEventListener('click', e => {
   const restar = e.target.closest('#decrement');
   const add = e.target.closest('#add');
-  if (restar){
-    value--;
-    cantidadInput.innerHTML = value;
-  } else if (add) {
-    value++;
-    cantidadInput.innerHTML = value;
+
+   if (restar){
+    const id = restar.parentElement.parentElement.parentElement.id;
+    const product = carrito.products.find(p => p._id === id);
+    const updatedProduct = {...product, qnty: product.qnty - 1};
+    if (product.qnty > 1) {
+      const updatedProducts = carrito.products.map(p => {
+        if (p._id === updatedProduct._id) {
+          return updatedProduct;
+        } else {
+          return p;
+        }
+        });
+        carrito = {...carrito, products: updatedProducts};
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
+    renderCart();
   }
-  carrito = {...carrito, qy: cantidadInput.innerHTML};
-  
+
+  if (add) {
+    const id = add.parentElement.parentElement.parentElement.id;
+    const product = carrito.products.find(p => p._id === id);
+
+    if (product.qnty < Number(product.stock)) {
+      const updatedProduct = {...product, qnty: product.qnty + 1};
+      const updatedProducts = carrito.products.map(p => {
+        if (p._id === updatedProduct._id) {
+          return updatedProduct;
+        } else {
+          return p;
+        }
+        });
+        carrito = {...carrito, products: updatedProducts};
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        renderCart();
+    }
+  }
 }); 
 
 //Checkout

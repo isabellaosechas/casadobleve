@@ -136,9 +136,10 @@ const createNavbarUser = () => {
         <li id="log-out" class="">Cerrar sesion</li>
       </ul>
     </div>
+    </div>
 
     <!-- Menu responsive -->
-    <div id="menu-responsive" class="hidden md:hidden bg-[#E7782D] z-10 fixed top-24 right-24 left-0 bottom-0">
+      <div id="menu-responsive" class="hidden md:hidden bg-[#E7782D] z-10 fixed top-24 right-24 left-0 bottom-0">
     <div class="flex justify-center mt-16">
       <ul class="flex flex-col justify-center text-left gap-6 text-xl text-orange-50 font-semibold">
         <li class=""><a href="/comprar">COMPRAR</a></li>
@@ -158,8 +159,6 @@ const createNavbarUser = () => {
           <g fill="#fcf4ea" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M9.61133,5c-2.53462,0 -4.61133,2.07671 -4.61133,4.61133v12.77734c0,2.53462 2.07671,4.61133 4.61133,4.61133h12.77734c2.53462,0 4.61133,-2.07671 4.61133,-4.61133v-12.77734c0,-2.53462 -2.07671,-4.61133 -4.61133,-4.61133zM9.61133,7h12.77734c1.45338,0 2.61133,1.15795 2.61133,2.61133v12.77734c0,1.45338 -1.15795,2.61133 -2.61133,2.61133h-12.77734c-1.45338,0 -2.61133,-1.15795 -2.61133,-2.61133v-12.77734c0,-1.45338 1.15795,-2.61133 2.61133,-2.61133zM17,9v10c0,1.11667 -0.88333,2 -2,2c-1.11667,0 -2,-0.88333 -2,-2c0,-1.11667 0.88333,-2 2,-2v-2c-2.19733,0 -4,1.80267 -4,4c0,2.19733 1.80267,4 4,4c2.19733,0 4,-1.80267 4,-4v-6.11133c0.82783,0.64109 1.80928,1.09544 2.92773,1.11133l0.0293,-2c-1.64627,-0.02339 -2.95703,-1.34577 -2.95703,-3z"></path></g></g>
           </svg></a>
       </div>
-    </div>
-
    </div>
   `;
 };
@@ -267,8 +266,10 @@ userBtn.addEventListener('click', e =>{
 //Responsive
 const navBtn = document.querySelector('#burger-menu');
 navBtn.addEventListener('click', e =>{
+  console.log(navBtn);
     const menu = navBtn.children[0].children[0]; 
     const menuOpen = document.querySelector('#menu-responsive');
+    console.log(menuOpen);
     if (!navBtn.classList.contains('active')) {
         navBtn.classList.add('active');
        menu.innerHTML = `

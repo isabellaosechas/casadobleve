@@ -177,15 +177,16 @@ tableBody.addEventListener('click', async e => {
 
     editForm.addEventListener('submit', async e => {
       e.preventDefault();
-      await axios.patch(`/api/products/${id}`, {name: editNombre.innerHTML, price: editPrecio.innerHTML,  description: editDescripcion.innerHTML, stock: editStock.innerHTML});
-        // editedproducts = products.map(product => {
-        //   if (product._id === Number(lista.id)) {
-        //     return {...product, name: editNombre.innerHTML, price: editPrecio.innerHTML,  description: editDescripcion.innerHTML, stock: editStock.innerHTML}
-        //   } else {
-        //     return product
-        //   } 
-        // });
-        // console.log(products);
+      const { data} = await axios.patch(`/api/products/${id}`, {name: editNombre.innerHTML, price: editPrecio.innerHTML,  description: editDescripcion.innerHTML, stock: editStock.innerHTML});
+        products = products.map(product => {
+          if (product._id === data._id) {
+            return data;
+          } else {
+            return product;
+          } 
+        });
+        console.log(products);
+        renderProducts(products);
         editModal.classList.add('hidden');  
     });
 

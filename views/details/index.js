@@ -75,21 +75,38 @@ const user = JSON.parse(localStorage.getItem('currentUser'));
 const addForm = document.querySelector('#add-form');
 addForm.addEventListener('submit', async e =>{
     e.preventDefault();
-    const product = producto
     const qnty = cantidadInput.value;
+    const newProduct = {...producto, qnty: Number(qnty)};
     const oldProducts = carrito.products;
-    const newProducts = oldProducts.concat({ qy: qnty, product: product });
-    carrito = {...carrito, products: newProducts};
+    const productExist = oldProducts.find(p => p._id === producto._id);
+    if (productExist) {
+      const updatedProduct = {...productExist, qnty: Number(qnty)};
+      const updatedProducts = oldProducts.map(p => {
+        if (p._id === updatedProduct._id) {
+          return updatedProduct;
+        } else {
+          return p;
+        }
+      });
+      carrito = {...carrito, products: updatedProducts};
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+      return;
+    }
+    const updatedProducts = oldProducts.concat(newProduct);
+    carrito = {...carrito, products: updatedProducts};
     if (user) {
       carrito = {...carrito, user: user.id}
     };
-
     localStorage.setItem('carrito', JSON.stringify(carrito));
     console.log(carrito);
-    
-  
+});
 
-
-})
+//Traer carrito
+(() => {
+  const carritoStringArray = localStorage.getItem('carrito');
+  if (carritoStringArray) {
+    carrito = JSON.parse(carritoStringArray);  
+  }
+})();
 
 
