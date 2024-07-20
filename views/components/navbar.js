@@ -251,11 +251,13 @@ const createNavbarAdmin = () => {
 
 if (!userExist) {
 createNavbarClient();
-};
-if (userExist.rol === "admin"){
+} else if(userExist){
+  if (userExist.rol === "admin"){
   createNavbarAdmin();
 } else if (userExist.rol === "client") {
 createNavbarUser();
+}
+
  
 
 };

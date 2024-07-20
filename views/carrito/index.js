@@ -20,19 +20,6 @@ const crearResumen = () => {
     resumen.innerHTML=`
     <h2 class="text-lg font-semibold mb-4">Resumen</h2>
                             <div class="flex justify-between mb-2">
-                                <span>Subtotal</span>
-                                <span></span>
-                            </div>
-                            <div class="flex justify-between mb-2">
-                                <span>Taxes</span>
-                                <span>$1.99</span>
-                            </div>
-                            <div class="flex justify-between mb-2">
-                                <span>Shipping</span>
-                                <span>$0.00</span>
-                            </div>
-                            <hr class="my-2">
-                            <div class="flex justify-between mb-2">
                                 <span class="font-semibold">Total</span>
                                 <span class="font-semibold">${total}$</span>
                             </div>
@@ -157,9 +144,8 @@ vaciarCarrito.addEventListener('click', e => {
   console.log('hola');;
 })
 
-const total0 = resumen.children[5].children[1].innerHTML
+const total0 = resumen.children[1].children[1].innerHTML
 const total = Number(total0.replace('$', ''));
-console.log(total);
 
 //Checkout
   const checkout = document.getElementById('checkout');
@@ -172,13 +158,12 @@ console.log(total);
       total: total,
       pago: false,
     }
-    
-    const { data } = await axios.post('/api/orders', newOrder);
-    const orderId = data._id;
-    window.location.pathname = `/checkout/${orderId}`;
+      const { data } = await axios.post('/api/orders', newOrder);
+      const id = data._id;
+      window.location.pathname = `/checkout/${id}`;
 
   } catch (error) {
-    console.log("no se ha podido agregar");
+    console.log("Para realizar una compra debe iniciar sesion");
     console.log(error);
   }
 

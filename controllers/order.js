@@ -17,8 +17,7 @@ const transporter = nodemailer.createTransport({
 //Post order
 ordersRouter.post('/', async (request, response) => {
     const { products, user, total, pago } = request.body;
-
-        if (!products || !user || !total ) {
+    if (!products || !user || !total ) {
             return response.status(400).json({ error: 'No puede agregarse al checkout' });
         }
         const newOrder = new Order({
@@ -29,8 +28,7 @@ ordersRouter.post('/', async (request, response) => {
         })
         const savedOrder = await newOrder.save();
         return response.status(201).json(savedOrder)
-    
-    });
+});
 
 //Get all orders
   ordersRouter.get('/', async (request, response) => {
