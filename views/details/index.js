@@ -4,6 +4,7 @@ const pageUrlArray = pageUrl.split('/');
 const id = pageUrlArray[4]
 
 let producto = [];
+
 let carrito = {
   products: [],
   user: false,

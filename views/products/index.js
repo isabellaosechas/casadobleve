@@ -189,71 +189,7 @@ tableBody.addEventListener('click', async e => {
         renderProducts(products);
         editModal.classList.add('hidden');  
     });
-
-   
-  
-
   }
-//   if (editBtn){
-//     const lista = editBtn.parentElement.parentElement;
-//     const id = editBtn.parentElement.parentElement.id;
-    // const name = lista.children[0].children[0];
-    // const price = lista.children[1].children[0];
-    // const description = lista.children[2].children[0];
-    // const stock = lista.children[3].children[0];
-//     const image = lista.children[4].children[0];
-    
-//     if (lista.classList.contains('editando')){
-//         // Logica de negocio
-        // await axios.patch(`/api/products/${id}`, {name: name.innerHTML, price: price.innerHTML,  description: description.innerHTML, stock: stock.innerHTML, image: image.innerHTML});
-        // products = products.map(product => {
-        //   if (product._id === Number(lista.id)) {
-        //     return {...product, name: name.innerHTML, price: price.innerHTML, description: description.innerHTML, stock: stock.innerHTML, image: image.innerHTML}
-        //   } else {
-        //     return product
-        //   }
-//         });
- 
-        
-//         // Logica del renderizado
-//         lista.classList.remove('editando');
-//         name.removeAttribute('contenteditable');
-//         price.removeAttribute('contenteditable');
-//         description.removeAttribute('contenteditable');
-//         stock.removeAttribute('contenteditable');
-//         image.removeAttribute('contenteditable');
-
-//         name.classList.remove('outline-indigo-700', 'outline-2', 'outline');
-//         price.classList.remove('outline-indigo-700', 'outline-2', 'outline');
-//         description.classList.remove('outline-indigo-700', 'outline-2', 'outline');
-//         stock.classList.remove('outline-indigo-700', 'outline-2', 'outline');
-//         image.classList.remove('outline-indigo-700', 'outline-2', 'outline');
-//         editBtn.innerHTML = `
-//         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-//   <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
-// </svg>
-//         `;
-//       } else {
-//         editBtn.innerHTML = `
-//         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-//   <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-// </svg>
-
-//         `;
-//         lista.classList.add('editando');
-//         name.setAttribute('contenteditable', true);
-//         price.setAttribute('contenteditable', true);
-//         description.setAttribute('contenteditable', true);
-//         stock.setAttribute('contenteditable', true);
-//         image.setAttribute('contenteditable', true);
-
-//         name.classList.add('outline-indigo-700', 'outline-1', 'outline');
-//         price.classList.add('outline-indigo-700', 'outline-1', 'outline');
-//         description.classList.add('outline-indigo-700', 'outline-1', 'outline');
-//         stock.classList.add('outline-indigo-700', 'outline-1', 'outline');
-//         image.classList.add('outline-indigo-700', 'outline-1', 'outline');
-//       }
-//     }
   });
 
 

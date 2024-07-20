@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="icon" href="/images/logo.png" type="image/x-icon">
+    <title>Casadobleve || Checkout</title>
+</head>
+<body>
+    <!-- Banner -->
+    <div class="flex gap-4 z-10 flex-col items-center  justify-center text-center bg-[#E7782D] text-orange-50 px-6 py-2 top-0 right-0 left-0">
+        <p class="truncate text-sm animate-loop-scroll"> ✹ ENVIOS NACIONALES GRATIS A PARTIR DE 120$ ✹ </p>
+    </div>
+    <!-- Nav Bar -->
+     <nav id="navbar" class="sticky  z-10 section-x-padding flex flex-row items-center justify-between py-2 left-0 right-0 bg-orange-50 text-black text-sm max-w-full mx-auto">  
+     </nav>
+     <div id="notification" class="flex justify-center fixed"></div>
+    
+
+     <!-- Contenido -->
+     <div class="flex justify-center mx-auto max-w-7xl min-h-screen px-4 mt-4">
+        <div class="h-fit px-7 w-[700px] rounded-[12px] bg-white p-4 shadow-md border">
+            <p class="text-xl font-semibold text-blue-900 cursor-pointer transition-all hover:text-black">
+                Seleccione metodo de pago
+            </p> 
+
+            <div>
+                <select name="" id="seleccionar-metodo">
+                    <option value="pago-movil" selected>Pago Movil</option>
+                    <option value="" disabled>Zelle</option>
+                </select>
+            </div>
+             <div class="flex flex-col md:flex-row">
+               <!-- Datos pago-->
+            <div id="pago-datos">
+                <div class="w-full p-4">
+                    <div class="bg-white rounded-lg ">
+                    <div id="total-pagar">
+                        
+                        </div>
+                        
+                        
+                        <form>
+                            <div class="gap-6">
+                                <div class="col-span-2 sm:col-span-1">
+                                    <input type="text" name="card-number" disabled id="card-number" placeholder="Banco: Mercantil" class="w-full py-2 px-4 text-sm border-none focus:outline-none focus:border-blue-500">
+                                </div>
+                                <div class="col-span-2 sm:col-span-1">
+                                        <input type="text" name="card-number" disabled id="card-number" placeholder="Tlf: 0412-8845888" class="w-full py-2 px-4 text-sm border-none focus:outline-none focus:border-blue-500">
+                                </div>
+                                
+                                </div>
+                                <div class="col-span-2 sm:col-span-1">
+                                    <input type="text" name="card-number" disabled id="card-number" placeholder="CI: 30.582.558" class="w-full py-2 px-4 text-sm border-none focus:outline-none focus:border-blue-500">
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Client Payment info -->
+            <div id="pago-info">
+                <div class="w-full p-4">
+                    <div class="bg-white ">
+                        <h2 class="text-lg font-medium mb-6">Datos del Pago</h2>
+                        <form id="pago-form">
+                            <div class="grid grid-cols-2 gap-6">
+                                <div class="col-span-2 sm:col-span-1">
+                                    <label for="card-number" class="block text-sm font-medium text-gray-700 mb-2">Banco</label>
+                                    <input type="text" name="card-number" required id="card-number" placeholder="" class="w-full py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500">
+                                </div>
+                                <div class="col-span-2 sm:col-span-1">
+                                    <label for="expiration-date" class="block text-sm font-medium text-gray-700 mb-2">Telefono</label>
+                                    <div class="mt-1 flex flex-row">
+                                        <select name="codigo" id="codigo"  class=" border-gray-300">
+                                     <option value="" selected disabled>04**</option>
+                                     <option>0412</option>
+                                     <option>0414</option>
+                                     <option>0416</option>
+                                     <option>0424</option>
+                                     <option>0426</option>
+                                        </select>
+                                        <input id="telefono" name="telefono" required type="telefono" autocomplete="telefono" 
+                                            class="appearance-none  relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:z-10 sm:text-sm"
+                                            placeholder="Numero de telefono">
+                                    </div>
+                                </div>
+                                
+                                </div>
+                                <div class="col-span-2 sm:col-span-1 mt-2">
+                                    <label for="cvv" class="block text-sm font-medium text-gray-700 mb-2">Referencia-ultimos 4 digitos</label>
+                                    <input type="text" name="cvv" id="cvv" required placeholder="" class="w-full py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500">
+                                </div>
+                                <div id="fecha" class="col-span-2 sm:col-span-1">
+                                    
+                            </div>
+                            <div class="mt-6">
+                                <button type="submit" class="w-full bg-green-500 hover:bg-blue-600 text-white font-medium py-3 rounded-lg focus:outline-none">Pagar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>  
+             </div>
+           
+        </div>   
+    </div>
+
+<!-- Contact section -->
+<section id="contact-section" class="bg-[#C0DDE2] mt-16 flex items-center justify-center text-center text-black px-6 py-2 right-0 left-0">
+</section>
+<!-- Footer -->
+<section id="footer" class="bg-[#C9C26B] flex items-center justify-center text-center text-orange-50 px-6 py-2 right-0 left-0 mx-auto">
+</section>
+
+<script type="module" src="/components/contact.js"></script>
+<script type="module" src="/components/footer.js"></script>
+<script type="module" src="/components/notification.js"></script>
+    <script type="module" src="/components/navbar.js"></script>
+    <script type="module" src="index.js"></script>
+</body>
+</html>

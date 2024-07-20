@@ -19,7 +19,7 @@
 
     <!-- Contenido -->
     <div class="bg-gray-100 py-8">
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto max-w-7xl px-4">
             <div class="flex flex-col mt-16 md:flex-row gap-4">
                 <div class="md:w-3/4">
                     <div class="bg-white rounded-lg shadow-md p-6 mb-4">
@@ -30,12 +30,15 @@
                                     <th class="text-left font-semibold">Price</th>
                                     <th class="text-left font-semibold">Quantity</th>
                                     <th class="text-left font-semibold">Total</th>
+                                    <th class="text-left font-semibold"></th>
                                 </tr>
                             </thead>
                             <tbody id="table-body">
                                 <!-- More product rows -->
                             </tbody>
                         </table>
+                        <p id="vaciar-carrito" class="cursor-pointer text-orange-500">Vaciar Carrito</p>
+                        </div>
                     </div>
                 </div>
                 <div class="md:w-1/4">
@@ -45,7 +48,7 @@
             </div>
         </div>
     </div>
-     <script src="../components/navbar.js"></script>
+     <script type="module" src="/components/navbar.js"></script>
      <script type="module" src="index.js"></script>
 </body>
 </html>

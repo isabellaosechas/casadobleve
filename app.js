@@ -13,7 +13,7 @@ const logoutRouter = require('./controllers/logout');
 const { PAGE_URL } = require('./config');
 const { MONGO_URI } = require('./config');
 const productRouter = require('./controllers/product');
-const cartRouter = require('./controllers/cart');
+const ordersRouter = require('./controllers/order');
 const eventRouter = require('./controllers/events');
 const { userExtractor } = require('./middleware/auth');
 
@@ -54,9 +54,8 @@ app.use('/', express.static(path.resolve('views', 'home')));
 app.use('/comprar', express.static(path.resolve('views', 'comprar')));
 app.use('/carrito', express.static(path.resolve('views', 'carrito')));
 app.use('/comprar/:id', express.static(path.resolve('views', 'details')));
-
 app.use('/eventos', express.static(path.resolve('views', 'eventos')));
-
+app.use('/checkout/:id', express.static(path.resolve('views', 'checkout')));
 
 app.use(bodyParser.json());
 app.use(morgan('tiny'));
@@ -65,7 +64,7 @@ app.use(morgan('tiny'));
 //Rutas Backend
 app.use('/api/products', productRouter);
 app.use('/api/events', eventRouter);
-app.use('api/cart', cartRouter);
+app.use('/api/orders', ordersRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/login', loginRouter);
 app.use('/api/logout', logoutRouter);
