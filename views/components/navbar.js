@@ -16,11 +16,11 @@ const createNavbarClient = () => {
 
            <!--navbar Desktop  -->
             <div>
-              <ul class="hidden md:flex flex-row gap-4 text-sm font-semibold">
-                <li class="hover:text-orange-500"><a href="/comprar">Comprar</a></li>
-                <li class="hover:text-orange-500"><a href="/eventos">Eventos</a></li>
-                <li class="hover:text-orange-500"><a href="">Sobre nosotros</a></li>
-                <li class="hover:text-orange-500"><a href="">Contacto</a></li>
+              <ul class="hidden md:flex flex-row gap-4 text-xs font-semibold">
+                <li class="hover:text-orange-500"><a href="/comprar">COMPRAR</a></li>
+                <li class="hover:text-orange-500"><a href="/eventos">EVENTOS</a></li>
+                <li class="hover:text-orange-500"><a href="">SOBRE NOSOTROS</a></li>
+                <li class="hover:text-orange-500"><a href="">CONTACTO</a></li>
               </ul>
             </div>
 
@@ -93,11 +93,11 @@ const createNavbarUser = () => {
 
          <!--navbar Desktop  -->
           <div>
-            <ul class="hidden md:flex flex-row gap-4 text-sm font-semibold">
-              <li class="hover:text-orange-500"><a href="/comprar">Comprar</a></li>
-              <li class="hover:text-orange-500"><a href="/eventos">Eventos</a></li>
-              <li class="hover:text-orange-500"><a href="">Sobre nosotros</a></li>
-              <li class="hover:text-orange-500"><a href="">Contacto</a></li>
+            <ul class="hidden md:flex flex-row gap-4 text-xs font-semibold">
+              <li class="hover:text-orange-500"><a href="/comprar">COMPRAR</a></li>
+              <li class="hover:text-orange-500"><a href="/eventos">EVENTOS</a></li>
+              <li class="hover:text-orange-500"><a href="">SOBRE NOSOTROS</a></li>
+              <li class="hover:text-orange-500"><a href="">CONTACTO</a></li>
             </ul>
           </div>
 
@@ -178,11 +178,11 @@ const createNavbarAdmin = () => {
 
         <!--navbar Desktop  -->
          <div>
-           <ul class="hidden md:flex flex-row gap-4 text-sm font-semibold">
-             <li class="hover:text-orange-500"><a href="/comprar">Comprar</a></li>
-             <li class="hover:text-orange-500"><a href="/eventos">Eventos</a></li>
-             <li class="hover:text-orange-500"><a href="">Sobre nosotros</a></li>
-             <li class="hover:text-orange-500"><a href="">Contacto</a></li>
+           <ul class="hidden md:flex flex-row gap-4 text-xs font-semibold">
+             <li class="hover:text-orange-500"><a href="/comprar">COMPRAR</a></li>
+             <li class="hover:text-orange-500"><a href="/eventos">EVENTOS</a></li>
+             <li class="hover:text-orange-500"><a href="">SOBRE NOSOTROS</a></li>
+             <li class="hover:text-orange-500"><a href="">CONTACTO</a></li>
            </ul>
          </div>
 

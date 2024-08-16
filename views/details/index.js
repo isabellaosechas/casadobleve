@@ -17,41 +17,34 @@ producto = data;
 
 //Render product
 productoDetalles.innerHTML=`
- <div class="">
-          <div class="">
-            <img class=" " src="/uploads/${producto.image}" alt="">
-          </div>
-          <!-- Datos -->
-            <div class="flex flex-row items-center mx-4 justify-between bg-primary-background text-primary-text section-x-padding lg:col-span-5">
-                <h1  class=" mt-4 break-words font-heading text-2xl lg:text-3xl">${producto.name}</h1>
-                <span class="mt-4 text-2xl">${producto.price}</span>
+ <div class="flex flex-col md:flex-row mx-2">
+                    <div class="md:flex-1 md:px-4">
+                        <div class="h-[460px] rounded-lg mb-4">
+                            <img class="w-full h-full object-cover" src="/uploads/${producto.image}"  alt="Imagen producto">
+                        </div>
+                    </div>
+                    <div class="md:flex-1 px-4">
+                        
+                        <div class="flex flex-row md:flex-col md:justify-start justify-between mb-2">
+                            <h2 class="text-2xl font-bold mb-2">${producto.name}</h2>
+                            <div class="mr-4">
+                                <span class="text-xl font-bold text-orange-400">${producto.price}</span>
+                            </div>
+                        </div>       
+                            <p class="text-sm mt-2">
+                            ${producto.description}
+                            </p>
+                            <div class="mt-4">
+                            <span class="font-bold">Cantidad:</span>
+                            <div id="seccion-cantidad" class="flex items-center">
+                                <button id="decrement" class="border bg-white rounded-md py-2 px-2">-</button>
+                                <span id="cantidad" class="text-center w-8">1</span>
+                                <button id="add" class="border rounded-md bg-white py-2 px-2">+</button>
+                            </div>
+                            <button id="checkout" class="bg-[#C9C26B] hover:bg-[#afa74f] text-white py-2 px-4 mt-4 md:mt-12 w-full">Agregar al carrito</button>
+                    </div>
+                </div>
             </div>
-            <div class="mt-4 mx-4">
-                <p>${producto.description}</p>
-            </div>
-            <!-- Cantidad -->
-           <div class="custom-number-input h-10 w-32">
-  <div id="seccion-cantidad" class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
-    <button id="decrement" class=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-      <span class="m-auto text-2xl font-thin">−</span>
-    </button>
-    <input type="number" id="cantidad" class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700" name="custom-input-number" value="1"></input>
-  <button id="add" class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-    <span class="m-auto text-2xl font-thin">+</span>
-  </button>
-</div>
-        
-        <!-- Cierra el div -->
-            </div> 
-            <!-- Agregar al carrito -->
-            <div>
-                <form id="add-form" action="">
-                    <button id="btn-form"
-                    class="py-2 w-full mx-2 my-8 text-center justify-center bg-orange-500 border rounded-md text-white  hover:bg-orange-700 hover:text-gray-100"
-                    type="submit">Agregar</button>
-                </form>  
-            </div>  
-     </div> 
 `;
 //Cantidad funcionamiento
 const cantidadInput = document.querySelector('#cantidad')

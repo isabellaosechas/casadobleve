@@ -13,6 +13,7 @@ form.addEventListener('submit', async e => {
     const { data } = await axios.post('/api/login', user);
     localStorage.setItem('currentUser', JSON.stringify(data));
     window.location.pathname = `/`;
+    localStorage.removeItem('carrito')
     } catch (error) {
         console.log(error.response.data.error);
         errorText.innerHTML = error.response.data.error;

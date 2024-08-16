@@ -23,7 +23,7 @@ const crearResumen = () => {
                                 <span class="font-semibold">Total</span>
                                 <span class="font-semibold">${total}$</span>
                             </div>
-                            <button id="checkout" class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-lg mt-4 w-full">Ir a pagar</button>
+                            <button id="checkout" class="bg-[#C9C26B] hover:bg-[#afa74f] text-white py-2 px-4 mt-4 w-full">Ir a pagar</button>
     `;
 };
 
@@ -46,9 +46,9 @@ const renderCart = () => {
                                     <td class="py-4">${item.price}</td>
                                     <td class="py-4">
                                         <div id="seccion-cantidad" class="flex items-center">
-                                            <button id="decrement" class="border rounded-md py-2 px-4 mr-2">-</button>
+                                            <button id="decrement" class="border rounded-md py-2 px-2">-</button>
                                             <span id="cantidad" class="text-center w-8">${item.qnty}</span>
-                                            <button id="add" class="border rounded-md py-2 px-4 ml-2">+</button>
+                                            <button id="add" class="border rounded-md py-2 px-2">+</button>
                                         </div>
                                     </td>
                                     <td class="py-4">${subtotal}$</td>
@@ -158,11 +158,15 @@ const total = Number(total0.replace('$', ''));
       total: total,
       pago: false,
     }
+
       const { data } = await axios.post('/api/orders', newOrder);
       const id = data._id;
+      console.log(data);
+      
       window.location.pathname = `/checkout/${id}`;
 
   } catch (error) {
+    window.location.pathname = `/login`;
     console.log("Para realizar una compra debe iniciar sesion");
     console.log(error);
   }
