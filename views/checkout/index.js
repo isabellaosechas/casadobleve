@@ -2,6 +2,10 @@ import { createNotification } from "/components/notification.js";
 const totalPagar = document.querySelector('#total-pagar');
 const pagoForm = document.querySelector('#pago-form');
 const fechaPago = document.querySelector('#fecha');
+const bancoInput = document.querySelector('#banco');
+const codigoInput = document.querySelector('#codigo');
+const telefonoInput = document.querySelector('#telefono');
+const refInput = document.querySelector('#ref');
 const notification = document.querySelector('#notification');
 const pageUrl = window.location.href;
 const pageUrlArray = pageUrl.split('/');
@@ -29,10 +33,10 @@ let order = [];
 const mostrarTotalPagar = () => {
     const total = order.total * tasaDolar;
 totalPagar.innerHTML = `
-<h2 class="text-lg font-medium mb-4">Total a pagar</h2>
+<h2 class="text-lg font-medium">Total a pagar</h2>
                         <p>Total: ${order.total}$</p>
                         <p>Tasa: ${tasaDolar}</p>
-                        <h2 class="text-lg font-medium mb-4">Total a pagar: Bs ${total}</h2>
+                        <h2 class="text-lg font-medium mb-4 mt-2">Total a pagar: Bs ${total}</h2>
 `
 };
 
@@ -51,12 +55,30 @@ mostrarFechaPago();
   
 pagoForm.addEventListener('submit', async e => {
     e.preventDefault();
-    const { data } = await axios.patch(`/api/orders/${id}`, {pago: true});
-    localStorage.removeItem('carrito');
-    createNotification(false, data);
-    setTimeout(() => {
-        notification.innerHTML = '';
-    }, 5000);
-    window.location.href = `/`;
+    const { data } = await axios.get(`/api/orders/${id}`);
+    order = data;
+    try {
+      const newPago = {
+        banco: bancoInput.value,
+        telefono: codigoInput.value + telefonoInput.value,
+        ref: refInput.value,
+        fecha: 'fecha',
+        order: [order]
+      };
+  
+        console.log(newPago);
+        
+    } catch (error) {
+      console.log("No se ha podido procesar el pago");
+      console.log(error);
+    }
+    // const { data } = await axios.patch(`/api/orders/${id}`, {pago: true});
+    // localStorage.removeItem('carrito');
+
+    // createNotification(false, data);
+    // setTimeout(() => {
+    //     notification.innerHTML = '';
+    // }, 5000);
+    // window.location.href = `/`;
 
 });

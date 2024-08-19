@@ -18,7 +18,7 @@ const crearResumen = () => {
 
      //Mostrar
     resumen.innerHTML=`
-    <h2 class="text-lg font-semibold mb-4">Resumen</h2>
+    <h2 class="text-lg font-semibold mb-2">Resumen</h2>
                             <div class="flex justify-between mb-2">
                                 <span class="font-semibold">Total</span>
                                 <span class="font-semibold">${total}$</span>

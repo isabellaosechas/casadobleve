@@ -14,6 +14,7 @@ const { PAGE_URL } = require('./config');
 const { MONGO_URI } = require('./config');
 const productRouter = require('./controllers/product');
 const ordersRouter = require('./controllers/order');
+const pagoRouter = require('./controllers/pago');
 const eventRouter = require('./controllers/events');
 const { userExtractor } = require('./middleware/auth');
 
@@ -64,6 +65,7 @@ app.use(morgan('tiny'));
 //Rutas Backend
 app.use('/api/products', productRouter);
 app.use('/api/events', eventRouter);
+app.use('/api/pagos', pagoRouter);
 app.use('/api/orders', ordersRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/login', loginRouter);
