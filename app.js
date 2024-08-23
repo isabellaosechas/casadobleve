@@ -56,6 +56,7 @@ app.use('/comprar', express.static(path.resolve('views', 'comprar')));
 app.use('/carrito', express.static(path.resolve('views', 'carrito')));
 app.use('/comprar/:id', express.static(path.resolve('views', 'details')));
 app.use('/eventos', express.static(path.resolve('views', 'eventos')));
+app.use('/contacto', express.static(path.resolve('views', 'contacto')));
 app.use('/checkout/:id', express.static(path.resolve('views', 'checkout')));
 
 app.use(bodyParser.json());

@@ -162,7 +162,6 @@ const total = Number(total0.replace('$', ''));
       const { data } = await axios.post('/api/orders', newOrder);
       const id = data._id;
       console.log(data);
-      
       window.location.pathname = `/checkout/${id}`;
 
   } catch (error) {

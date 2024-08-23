@@ -20,7 +20,7 @@ const createNavbarClient = () => {
                 <li class="hover:text-orange-500"><a href="/comprar">COMPRAR</a></li>
                 <li class="hover:text-orange-500"><a href="/eventos">EVENTOS</a></li>
                 <li class="hover:text-orange-500"><a href="">SOBRE NOSOTROS</a></li>
-                <li class="hover:text-orange-500"><a href="">CONTACTO</a></li>
+                <li class="hover:text-orange-500"><a href="/contacto">CONTACTO</a></li>
               </ul>
             </div>
 
@@ -62,16 +62,16 @@ const createNavbarClient = () => {
         </ul>
       </div>
       <div class="flex flex-row justify-center py-16 gap-4">
-        <div cl>
-          <a href=""><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256">
-          <g fill="#fcf4ea" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M11.46875,5c-3.55078,0 -6.46875,2.91406 -6.46875,6.46875v9.0625c0,3.55078 2.91406,6.46875 6.46875,6.46875h9.0625c3.55078,0 6.46875,-2.91406 6.46875,-6.46875v-9.0625c0,-3.55078 -2.91406,-6.46875 -6.46875,-6.46875zM11.46875,7h9.0625c2.47266,0 4.46875,1.99609 4.46875,4.46875v9.0625c0,2.47266 -1.99609,4.46875 -4.46875,4.46875h-9.0625c-2.47266,0 -4.46875,-1.99609 -4.46875,-4.46875v-9.0625c0,-2.47266 1.99609,-4.46875 4.46875,-4.46875zM21.90625,9.1875c-0.50391,0 -0.90625,0.40234 -0.90625,0.90625c0,0.50391 0.40234,0.90625 0.90625,0.90625c0.50391,0 0.90625,-0.40234 0.90625,-0.90625c0,-0.50391 -0.40234,-0.90625 -0.90625,-0.90625zM16,10c-3.30078,0 -6,2.69922 -6,6c0,3.30078 2.69922,6 6,6c3.30078,0 6,-2.69922 6,-6c0,-3.30078 -2.69922,-6 -6,-6zM16,12c2.22266,0 4,1.77734 4,4c0,2.22266 -1.77734,4 -4,4c-2.22266,0 -4,-1.77734 -4,-4c0,-2.22266 1.77734,-4 4,-4z"></path></g></g>
-          </svg></a>
-        </div>
-        <div>
-          <a href=""><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256">
-            <g fill="#fcf4ea" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M9.61133,5c-2.53462,0 -4.61133,2.07671 -4.61133,4.61133v12.77734c0,2.53462 2.07671,4.61133 4.61133,4.61133h12.77734c2.53462,0 4.61133,-2.07671 4.61133,-4.61133v-12.77734c0,-2.53462 -2.07671,-4.61133 -4.61133,-4.61133zM9.61133,7h12.77734c1.45338,0 2.61133,1.15795 2.61133,2.61133v12.77734c0,1.45338 -1.15795,2.61133 -2.61133,2.61133h-12.77734c-1.45338,0 -2.61133,-1.15795 -2.61133,-2.61133v-12.77734c0,-1.45338 1.15795,-2.61133 2.61133,-2.61133zM17,9v10c0,1.11667 -0.88333,2 -2,2c-1.11667,0 -2,-0.88333 -2,-2c0,-1.11667 0.88333,-2 2,-2v-2c-2.19733,0 -4,1.80267 -4,4c0,2.19733 1.80267,4 4,4c2.19733,0 4,-1.80267 4,-4v-6.11133c0.82783,0.64109 1.80928,1.09544 2.92773,1.11133l0.0293,-2c-1.64627,-0.02339 -2.95703,-1.34577 -2.95703,-3z"></path></g></g>
-            </svg></a>
-        </div>
+         <div>
+       <a href="https://www.instagram.com/casadobleve/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256">
+       <g fill="#fcf4ea" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M11.46875,5c-3.55078,0 -6.46875,2.91406 -6.46875,6.46875v9.0625c0,3.55078 2.91406,6.46875 6.46875,6.46875h9.0625c3.55078,0 6.46875,-2.91406 6.46875,-6.46875v-9.0625c0,-3.55078 -2.91406,-6.46875 -6.46875,-6.46875zM11.46875,7h9.0625c2.47266,0 4.46875,1.99609 4.46875,4.46875v9.0625c0,2.47266 -1.99609,4.46875 -4.46875,4.46875h-9.0625c-2.47266,0 -4.46875,-1.99609 -4.46875,-4.46875v-9.0625c0,-2.47266 1.99609,-4.46875 4.46875,-4.46875zM21.90625,9.1875c-0.50391,0 -0.90625,0.40234 -0.90625,0.90625c0,0.50391 0.40234,0.90625 0.90625,0.90625c0.50391,0 0.90625,-0.40234 0.90625,-0.90625c0,-0.50391 -0.40234,-0.90625 -0.90625,-0.90625zM16,10c-3.30078,0 -6,2.69922 -6,6c0,3.30078 2.69922,6 6,6c3.30078,0 6,-2.69922 6,-6c0,-3.30078 -2.69922,-6 -6,-6zM16,12c2.22266,0 4,1.77734 4,4c0,2.22266 -1.77734,4 -4,4c-2.22266,0 -4,-1.77734 -4,-4c0,-2.22266 1.77734,-4 4,-4z"></path></g></g>
+       </svg></a>
+     </div>
+     <div>
+       <a href="https://www.tiktok.com/@casadobleve" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256">
+         <g fill="#fcf4ea" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M9.61133,5c-2.53462,0 -4.61133,2.07671 -4.61133,4.61133v12.77734c0,2.53462 2.07671,4.61133 4.61133,4.61133h12.77734c2.53462,0 4.61133,-2.07671 4.61133,-4.61133v-12.77734c0,-2.53462 -2.07671,-4.61133 -4.61133,-4.61133zM9.61133,7h12.77734c1.45338,0 2.61133,1.15795 2.61133,2.61133v12.77734c0,1.45338 -1.15795,2.61133 -2.61133,2.61133h-12.77734c-1.45338,0 -2.61133,-1.15795 -2.61133,-2.61133v-12.77734c0,-1.45338 1.15795,-2.61133 2.61133,-2.61133zM17,9v10c0,1.11667 -0.88333,2 -2,2c-1.11667,0 -2,-0.88333 -2,-2c0,-1.11667 0.88333,-2 2,-2v-2c-2.19733,0 -4,1.80267 -4,4c0,2.19733 1.80267,4 4,4c2.19733,0 4,-1.80267 4,-4v-6.11133c0.82783,0.64109 1.80928,1.09544 2.92773,1.11133l0.0293,-2c-1.64627,-0.02339 -2.95703,-1.34577 -2.95703,-3z"></path></g></g>
+         </svg></a>
+     </div>
       </div>
 
      </div>
@@ -97,7 +97,7 @@ const createNavbarUser = () => {
               <li class="hover:text-orange-500"><a href="/comprar">COMPRAR</a></li>
               <li class="hover:text-orange-500"><a href="/eventos">EVENTOS</a></li>
               <li class="hover:text-orange-500"><a href="">SOBRE NOSOTROS</a></li>
-              <li class="hover:text-orange-500"><a href="">CONTACTO</a></li>
+              <li class="hover:text-orange-500"><a href="/contacto">CONTACTO</a></li>
             </ul>
           </div>
 
@@ -149,16 +149,16 @@ const createNavbarUser = () => {
       </ul>
     </div>
     <div class="flex flex-row justify-center py-16 gap-4">
-      <div cl>
-        <a href=""><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256">
-        <g fill="#fcf4ea" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M11.46875,5c-3.55078,0 -6.46875,2.91406 -6.46875,6.46875v9.0625c0,3.55078 2.91406,6.46875 6.46875,6.46875h9.0625c3.55078,0 6.46875,-2.91406 6.46875,-6.46875v-9.0625c0,-3.55078 -2.91406,-6.46875 -6.46875,-6.46875zM11.46875,7h9.0625c2.47266,0 4.46875,1.99609 4.46875,4.46875v9.0625c0,2.47266 -1.99609,4.46875 -4.46875,4.46875h-9.0625c-2.47266,0 -4.46875,-1.99609 -4.46875,-4.46875v-9.0625c0,-2.47266 1.99609,-4.46875 4.46875,-4.46875zM21.90625,9.1875c-0.50391,0 -0.90625,0.40234 -0.90625,0.90625c0,0.50391 0.40234,0.90625 0.90625,0.90625c0.50391,0 0.90625,-0.40234 0.90625,-0.90625c0,-0.50391 -0.40234,-0.90625 -0.90625,-0.90625zM16,10c-3.30078,0 -6,2.69922 -6,6c0,3.30078 2.69922,6 6,6c3.30078,0 6,-2.69922 6,-6c0,-3.30078 -2.69922,-6 -6,-6zM16,12c2.22266,0 4,1.77734 4,4c0,2.22266 -1.77734,4 -4,4c-2.22266,0 -4,-1.77734 -4,-4c0,-2.22266 1.77734,-4 4,-4z"></path></g></g>
-        </svg></a>
-      </div>
-      <div>
-        <a href=""><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256">
-          <g fill="#fcf4ea" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M9.61133,5c-2.53462,0 -4.61133,2.07671 -4.61133,4.61133v12.77734c0,2.53462 2.07671,4.61133 4.61133,4.61133h12.77734c2.53462,0 4.61133,-2.07671 4.61133,-4.61133v-12.77734c0,-2.53462 -2.07671,-4.61133 -4.61133,-4.61133zM9.61133,7h12.77734c1.45338,0 2.61133,1.15795 2.61133,2.61133v12.77734c0,1.45338 -1.15795,2.61133 -2.61133,2.61133h-12.77734c-1.45338,0 -2.61133,-1.15795 -2.61133,-2.61133v-12.77734c0,-1.45338 1.15795,-2.61133 2.61133,-2.61133zM17,9v10c0,1.11667 -0.88333,2 -2,2c-1.11667,0 -2,-0.88333 -2,-2c0,-1.11667 0.88333,-2 2,-2v-2c-2.19733,0 -4,1.80267 -4,4c0,2.19733 1.80267,4 4,4c2.19733,0 4,-1.80267 4,-4v-6.11133c0.82783,0.64109 1.80928,1.09544 2.92773,1.11133l0.0293,-2c-1.64627,-0.02339 -2.95703,-1.34577 -2.95703,-3z"></path></g></g>
-          </svg></a>
-      </div>
+       <div>
+       <a href="https://www.instagram.com/casadobleve/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256">
+       <g fill="#fcf4ea" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M11.46875,5c-3.55078,0 -6.46875,2.91406 -6.46875,6.46875v9.0625c0,3.55078 2.91406,6.46875 6.46875,6.46875h9.0625c3.55078,0 6.46875,-2.91406 6.46875,-6.46875v-9.0625c0,-3.55078 -2.91406,-6.46875 -6.46875,-6.46875zM11.46875,7h9.0625c2.47266,0 4.46875,1.99609 4.46875,4.46875v9.0625c0,2.47266 -1.99609,4.46875 -4.46875,4.46875h-9.0625c-2.47266,0 -4.46875,-1.99609 -4.46875,-4.46875v-9.0625c0,-2.47266 1.99609,-4.46875 4.46875,-4.46875zM21.90625,9.1875c-0.50391,0 -0.90625,0.40234 -0.90625,0.90625c0,0.50391 0.40234,0.90625 0.90625,0.90625c0.50391,0 0.90625,-0.40234 0.90625,-0.90625c0,-0.50391 -0.40234,-0.90625 -0.90625,-0.90625zM16,10c-3.30078,0 -6,2.69922 -6,6c0,3.30078 2.69922,6 6,6c3.30078,0 6,-2.69922 6,-6c0,-3.30078 -2.69922,-6 -6,-6zM16,12c2.22266,0 4,1.77734 4,4c0,2.22266 -1.77734,4 -4,4c-2.22266,0 -4,-1.77734 -4,-4c0,-2.22266 1.77734,-4 4,-4z"></path></g></g>
+       </svg></a>
+     </div>
+     <div>
+       <a href="https://www.tiktok.com/@casadobleve" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256">
+         <g fill="#fcf4ea" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M9.61133,5c-2.53462,0 -4.61133,2.07671 -4.61133,4.61133v12.77734c0,2.53462 2.07671,4.61133 4.61133,4.61133h12.77734c2.53462,0 4.61133,-2.07671 4.61133,-4.61133v-12.77734c0,-2.53462 -2.07671,-4.61133 -4.61133,-4.61133zM9.61133,7h12.77734c1.45338,0 2.61133,1.15795 2.61133,2.61133v12.77734c0,1.45338 -1.15795,2.61133 -2.61133,2.61133h-12.77734c-1.45338,0 -2.61133,-1.15795 -2.61133,-2.61133v-12.77734c0,-1.45338 1.15795,-2.61133 2.61133,-2.61133zM17,9v10c0,1.11667 -0.88333,2 -2,2c-1.11667,0 -2,-0.88333 -2,-2c0,-1.11667 0.88333,-2 2,-2v-2c-2.19733,0 -4,1.80267 -4,4c0,2.19733 1.80267,4 4,4c2.19733,0 4,-1.80267 4,-4v-6.11133c0.82783,0.64109 1.80928,1.09544 2.92773,1.11133l0.0293,-2c-1.64627,-0.02339 -2.95703,-1.34577 -2.95703,-3z"></path></g></g>
+         </svg></a>
+     </div>
    </div>
   `;
 };
@@ -182,7 +182,7 @@ const createNavbarAdmin = () => {
              <li class="hover:text-orange-500"><a href="/comprar">COMPRAR</a></li>
              <li class="hover:text-orange-500"><a href="/eventos">EVENTOS</a></li>
              <li class="hover:text-orange-500"><a href="">SOBRE NOSOTROS</a></li>
-             <li class="hover:text-orange-500"><a href="">CONTACTO</a></li>
+             <li class="hover:text-orange-500"><a href="/contacto">CONTACTO</a></li>
            </ul>
          </div>
 
@@ -230,17 +230,17 @@ const createNavbarAdmin = () => {
        <li class=""><a href="/comprar">COMPRAR</a></li>
        <li class=""><a href="/eventos">EVENTOS</a></li>
        <li class=""><a href="">SOBRE NOSOTROS</a></li>
-       <li class=""><a href="">CONTACTO</a></li>
+       <li class=""><a href="/contacto">CONTACTO</a></li>
      </ul>
    </div>
    <div class="flex flex-row justify-center py-16 gap-4">
-     <div cl>
-       <a href=""><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256">
+     <div>
+       <a href="https://www.instagram.com/casadobleve/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256">
        <g fill="#fcf4ea" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M11.46875,5c-3.55078,0 -6.46875,2.91406 -6.46875,6.46875v9.0625c0,3.55078 2.91406,6.46875 6.46875,6.46875h9.0625c3.55078,0 6.46875,-2.91406 6.46875,-6.46875v-9.0625c0,-3.55078 -2.91406,-6.46875 -6.46875,-6.46875zM11.46875,7h9.0625c2.47266,0 4.46875,1.99609 4.46875,4.46875v9.0625c0,2.47266 -1.99609,4.46875 -4.46875,4.46875h-9.0625c-2.47266,0 -4.46875,-1.99609 -4.46875,-4.46875v-9.0625c0,-2.47266 1.99609,-4.46875 4.46875,-4.46875zM21.90625,9.1875c-0.50391,0 -0.90625,0.40234 -0.90625,0.90625c0,0.50391 0.40234,0.90625 0.90625,0.90625c0.50391,0 0.90625,-0.40234 0.90625,-0.90625c0,-0.50391 -0.40234,-0.90625 -0.90625,-0.90625zM16,10c-3.30078,0 -6,2.69922 -6,6c0,3.30078 2.69922,6 6,6c3.30078,0 6,-2.69922 6,-6c0,-3.30078 -2.69922,-6 -6,-6zM16,12c2.22266,0 4,1.77734 4,4c0,2.22266 -1.77734,4 -4,4c-2.22266,0 -4,-1.77734 -4,-4c0,-2.22266 1.77734,-4 4,-4z"></path></g></g>
        </svg></a>
      </div>
      <div>
-       <a href=""><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256">
+       <a href="https://www.tiktok.com/@casadobleve" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256">
          <g fill="#fcf4ea" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M9.61133,5c-2.53462,0 -4.61133,2.07671 -4.61133,4.61133v12.77734c0,2.53462 2.07671,4.61133 4.61133,4.61133h12.77734c2.53462,0 4.61133,-2.07671 4.61133,-4.61133v-12.77734c0,-2.53462 -2.07671,-4.61133 -4.61133,-4.61133zM9.61133,7h12.77734c1.45338,0 2.61133,1.15795 2.61133,2.61133v12.77734c0,1.45338 -1.15795,2.61133 -2.61133,2.61133h-12.77734c-1.45338,0 -2.61133,-1.15795 -2.61133,-2.61133v-12.77734c0,-1.45338 1.15795,-2.61133 2.61133,-2.61133zM17,9v10c0,1.11667 -0.88333,2 -2,2c-1.11667,0 -2,-0.88333 -2,-2c0,-1.11667 0.88333,-2 2,-2v-2c-2.19733,0 -4,1.80267 -4,4c0,2.19733 1.80267,4 4,4c2.19733,0 4,-1.80267 4,-4v-6.11133c0.82783,0.64109 1.80928,1.09544 2.92773,1.11133l0.0293,-2c-1.64627,-0.02339 -2.95703,-1.34577 -2.95703,-3z"></path></g></g>
          </svg></a>
      </div>

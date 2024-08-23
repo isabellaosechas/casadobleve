@@ -9,7 +9,7 @@ const createContactSection = () => {
 <h3 class="mb-8 leading-relaxed">
   ¡Queremos escuharte!
 </h3>
-<button class=" text-black outline outline-1 outline-black py-2 font-semibold text-sm">CONTACTAR AHORA</button>
+<button class=" text-black outline outline-1 outline-black py-2 font-semibold text-sm"><a href="/contacto">CONTACTAR AHORA</a></button>
   </div>
     `;
 }
