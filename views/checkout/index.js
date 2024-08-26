@@ -12,22 +12,21 @@ const pageUrlArray = pageUrl.split('/');
 const id = pageUrlArray[4]
 const tasaDolar = 36.57;
 const fecha = new Date;
-  const hoy = fecha.toLocaleDateString();
-let data = [];
+  const hoy = fecha.toLocaleDateString(); 
 let order = [];
 
 //Tasa del dolar
 // const getDollar =async ()  => {
 //     try {
 //         const response = await fetch("https://ve.dolarapi.com/v1/dolares/oficial");
-//         if (response){
-//           data = await response.json()
-//           console.log(data);
-//         }
+//         const data = await response.json();
+//         console.log(data.promedio);
 //       } catch (error) {
 //         console.error(error.message)
 //       };
 //      };
+// getDollar();
+
 
 
 const mostrarTotalPagar = () => {

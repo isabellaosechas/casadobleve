@@ -48,28 +48,31 @@ productoDetalles.innerHTML=`
 `;
 //Cantidad funcionamiento
 const cantidadInput = document.querySelector('#cantidad')
-let value = Number(cantidadInput.value);
+let value = Number(cantidadInput.innerHTML);
+
 
 const cantidadSection = document.querySelector('#seccion-cantidad');
 cantidadSection.addEventListener('click', e => {
   const restar = e.target.closest('#decrement');
   const add = e.target.closest('#add');
   if (restar){
-    value--;
-    cantidadInput.value = value;
+    if (value > 1) {
+      value--;
+    }
+    cantidadInput.innerHTML = value;
   } else if (add) {
     value++;
-    cantidadInput.value = value;
+    cantidadInput.innerHTML = value;
   }
 }); 
 
 const user = JSON.parse(localStorage.getItem('currentUser'));
 
 //Anadir al carrito
-const addForm = document.querySelector('#add-form');
-addForm.addEventListener('submit', async e =>{
+const addBtn = document.querySelector('#checkout');
+addBtn.addEventListener('click', async e =>{
     e.preventDefault();
-    const qnty = cantidadInput.value;
+    const qnty = cantidadInput.innerHTML;
     const newProduct = {...producto, qnty: Number(qnty)};
     const oldProducts = carrito.products;
     const productExist = oldProducts.find(p => p._id === producto._id);

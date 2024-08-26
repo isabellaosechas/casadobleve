@@ -4,7 +4,7 @@ const createMenuAdmin = () => {
     menu.innerHTML = `
      <div class="flex items-center justify-center mt-8">
                <div class="flex items-center px-6">
-                  <img src="/images/logofooter.png" alt="">
+               <a href="/"><img src="/images/logofooter.png" alt=""></a>
                </div>
            </div>
            <!-- Menu -->

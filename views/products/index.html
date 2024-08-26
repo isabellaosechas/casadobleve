@@ -114,9 +114,6 @@
                                                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
                                                Stock</th>
                                                <th
-                                               class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
-                                               Imagen</th>
-                                               <th
                                                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50"></th>
                                        </tr>
                                    </thead>
@@ -130,7 +127,7 @@
                    
                    <!-- Product Modal -->
                    <div id="modelConfirm" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 ">
-                     <div class="relative top-40 p-6 mx-auto shadow-xl rounded-md bg-white max-w-md">
+                     <div class="relative top-[5rem] p-6 mx-auto shadow-xl rounded-md bg-white max-w-md">
                  
                          <div class="flex justify-end">
                              <button  id="closeContactForm" type="button"
@@ -162,7 +159,6 @@
                                     class="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none" placeholder="Descripcion"
                                     type="text">
                               </div>
-
                               <div>
                                  <input id="stock-producto"
                                     class="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none" placeholder="Stock"
@@ -171,6 +167,11 @@
                               <div>
                                  <label for="example1" class="mb-1 block text-sm text-gray-700">Cargar imagen</label>
                      <input id="imagen-producto" type="file" class="mt-2 block w-full text-sm file:mr-4 file:rounded-md file:border-0 file:bg-teal-500 file:py-2 file:px-4 file:text-sm file:font-semibold file:text-white hover:file:bg-teal-700 focus:outline-none disabled:pointer-events-none disabled:opacity-60" />
+                              </div>
+                              <div class="flex flex-row gap-2">
+                                <div class="h-12 w-12 bg-slate-300"></div>
+                                <div class="h-12 w-12 bg-slate-300"></div>
+                                <div class="h-12 w-12 bg-slate-300"></div>
                               </div>
                               <div class="flex justify-end">
                                  <button id="btn-form"
@@ -252,7 +253,7 @@
                 </div>
                 <!-- Edit modal -->
                 <div id="editModal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 ">
-                    <div class="relative top-40 p-6 mx-auto shadow-xl rounded-md bg-white max-w-md">
+                    <div class="relative top-[5rem] p-6 mx-auto shadow-xl rounded-md bg-white max-w-md">
                 
                         <div class="flex justify-end">
                             <button  id="closeEditModal" type="button"

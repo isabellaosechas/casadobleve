@@ -40,18 +40,18 @@ const renderCart = () => {
                                     <td class="py-4">
                                         <div class="flex items-center">
                                             <img class="h-16 w-16 mr-4" src="/uploads/${item.image}" alt="Product image">
-                                            <span class="font-semibold">${item.name}</span>
+                                            <span class="font-semibold text-sm"><a href="/comprar/${item._id}">${item.name}</a></span>
                                         </div>
                                     </td>
-                                    <td class="py-4">${item.price}</td>
+                                    <td class="py-4 text-xs">${item.price}</td>
                                     <td class="py-4">
                                         <div id="seccion-cantidad" class="flex items-center">
                                             <button id="decrement" class="border rounded-md py-2 px-2">-</button>
-                                            <span id="cantidad" class="text-center w-8">${item.qnty}</span>
+                                            <span id="cantidad" class="text-center text-xs w-8">${item.qnty}</span>
                                             <button id="add" class="border rounded-md py-2 px-2">+</button>
                                         </div>
                                     </td>
-                                    <td class="py-4">${subtotal}$</td>
+                                    <td class="text-xs py-4">${subtotal}$</td>
                                     <td class="py-4">
                                     <div class="flex items-center">
                                     <button id="delete-btn" class="hover:text-gray-900">
@@ -103,7 +103,7 @@ tableBody.addEventListener('click', e => {
         });
         carrito = {...carrito, products: updatedProducts};
         localStorage.setItem('carrito', JSON.stringify(carrito));
-    }
+    };
 
     renderCart();
     crearResumen();
@@ -141,7 +141,9 @@ tableBody.addEventListener('click', e => {
 
 //Vaciar Carrito
 vaciarCarrito.addEventListener('click', e => {
-  console.log('hola');;
+  localStorage.removeItem('carrito');
+  renderCart();
+  crearResumen();
 })
 
 const total0 = resumen.children[1].children[1].innerHTML

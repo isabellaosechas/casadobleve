@@ -18,9 +18,20 @@ const closeEditModal = document.querySelector('#closeEditModal');
 const editModal = document.querySelector('#editModal');
 
 
+
 (async () => {
   const { data } = await axios.get('/api/products');
 })();
+
+const user = JSON.parse(localStorage.getItem('currentUser'));
+console.log(user.rol);
+if (!user) {
+  window.location.pathname = `/`;
+};
+if (user.rol != 'admin'){
+  window.location.pathname = `/`;
+};
+
 
 let products = [];
 let filtered = [];
@@ -67,9 +78,6 @@ const renderProducts = (products) => {
                      </td>
                      <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
                       <p>${product.stock}</p>
-                      </td>
-                      <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                      <p>${product.image}</p>
                       </td>
                       <td class="flex flex-row gap-4 p-4 whitespace-nowrap text-sm font-semibold text-gray-500">
                       <button class="edit-btn hover:text-gray-900"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
