@@ -48,6 +48,8 @@ app.use('/uploads', express.static(path.resolve('uploads')));
 //Admin
 app.use('/dashboard', express.static(path.resolve('views', 'dashboard')));
 app.use('/events', express.static(path.resolve('views', 'events')));
+app.use('/pagos', express.static(path.resolve('views', 'pagos')));
+app.use('/pedidos', express.static(path.resolve('views', 'pedidos')));
 app.use('/productos', express.static(path.resolve('views', 'products')));
 
 //Cliente
@@ -57,6 +59,7 @@ app.use('/carrito', express.static(path.resolve('views', 'carrito')));
 app.use('/comprar/:id', express.static(path.resolve('views', 'details')));
 app.use('/eventos', express.static(path.resolve('views', 'eventos')));
 app.use('/contacto', express.static(path.resolve('views', 'contacto')));
+app.use('/sobre-nosotros', express.static(path.resolve('views', 'about')));
 app.use('/checkout/:id', express.static(path.resolve('views', 'checkout')));
 
 app.use(bodyParser.json());

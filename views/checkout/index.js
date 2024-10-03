@@ -58,21 +58,24 @@ pagoForm.addEventListener('submit', async e => {
     order = data;
     try {
       const newPago = {
+        user: order.user,
         banco: bancoInput.value,
         telefono: codigoInput.value + telefonoInput.value,
         ref: refInput.value,
-        fecha: 'fecha',
-        order: [order]
+        fecha: hoy,
+        order: order
       };
-  
-        console.log(newPago);
+        const { data } = await axios.post('/api/pagos', newPago);
+        console.log(order);
+        console.log(data);
+       
         
     } catch (error) {
       console.log("No se ha podido procesar el pago");
       console.log(error);
     }
-    // const { data } = await axios.patch(`/api/orders/${id}`, {pago: true});
-    // localStorage.removeItem('carrito');
+    order = await axios.patch(`/api/orders/${id}`, {pago: true});
+    localStorage.removeItem('carrito');
 
     // createNotification(false, data);
     // setTimeout(() => {

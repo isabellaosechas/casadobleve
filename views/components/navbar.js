@@ -17,9 +17,12 @@ const createNavbarClient = () => {
            <!--navbar Desktop  -->
             <div>
               <ul class="hidden md:flex flex-row gap-4 text-xs font-semibold">
-                <li class="hover:text-orange-500"><a href="/comprar">COMPRAR</a></li>
+               <li class="hover:text-orange-500 flex flex-row gap-1"><a href="/comprar">COMPRAR </a><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3 cursor-pointer mt-0.5">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+</svg>
+</li>
                 <li class="hover:text-orange-500"><a href="/eventos">EVENTOS</a></li>
-                <li class="hover:text-orange-500"><a href="">SOBRE NOSOTROS</a></li>
+                <li class="hover:text-orange-500"><a href="/sobre-nosotros">SOBRE NOSOTROS</a></li>
                 <li class="hover:text-orange-500"><a href="/contacto">CONTACTO</a></li>
               </ul>
             </div>
@@ -55,10 +58,13 @@ const createNavbarClient = () => {
       <div id="menu-responsive" class="hidden md:hidden bg-[#E7782D] z-10 fixed top-24 right-24 left-0 bottom-0">
       <div class="flex justify-center mt-16">
         <ul class="flex flex-col justify-center text-left gap-6 text-xl text-orange-50 font-semibold">
-          <li class=""><a href="/comprar">COMPRAR</a></li>
+          <li class=""><a href="/comprar">COMPRAR <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 ">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+</svg>
+</a></li>
           <li class=""><a href="/eventos">EVENTOS</a></li>
-          <li class=""><a href="">SOBRE NOSOTROS</a></li>
-          <li class=""><a href="">CONTACTO</a></li>
+          <li class=""><a href="/sobre-nosotros">SOBRE NOSOTROS</a></li>
+          <li class=""><a href="/contacto">CONTACTO</a></li>
         </ul>
       </div>
       <div class="flex flex-row justify-center py-16 gap-4">
@@ -94,9 +100,12 @@ const createNavbarUser = () => {
          <!--navbar Desktop  -->
           <div>
             <ul class="hidden md:flex flex-row gap-4 text-xs font-semibold">
-              <li class="hover:text-orange-500"><a href="/comprar">COMPRAR</a></li>
+              < <li class="hover:text-orange-500 flex flex-row gap-1"><a href="/comprar">COMPRAR </a><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3 cursor-pointer mt-0.5">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+</svg>
+</li>
               <li class="hover:text-orange-500"><a href="/eventos">EVENTOS</a></li>
-              <li class="hover:text-orange-500"><a href="">SOBRE NOSOTROS</a></li>
+              <li class="hover:text-orange-500"><a href="/sobre-nosotros">SOBRE NOSOTROS</a></li>
               <li class="hover:text-orange-500"><a href="/contacto">CONTACTO</a></li>
             </ul>
           </div>
@@ -144,8 +153,8 @@ const createNavbarUser = () => {
       <ul class="flex flex-col justify-center text-left gap-6 text-xl text-orange-50 font-semibold">
         <li class=""><a href="/comprar">COMPRAR</a></li>
         <li class=""><a href="/eventos">EVENTOS</a></li>
-        <li class=""><a href="">SOBRE NOSOTROS</a></li>
-        <li class=""><a href="">CONTACTO</a></li>
+        <li class=""><a href="/sobre-nosotros">SOBRE NOSOTROS</a></li>
+        <li class=""><a href="/contacto">CONTACTO</a></li>
       </ul>
     </div>
     <div class="flex flex-row justify-center py-16 gap-4">
@@ -179,9 +188,12 @@ const createNavbarAdmin = () => {
         <!--navbar Desktop  -->
          <div>
            <ul class="hidden md:flex flex-row gap-4 text-xs font-semibold">
-             <li class="hover:text-orange-500"><a href="/comprar">COMPRAR</a></li>
+             <li class="hover:text-orange-500 flex flex-row gap-1"><a href="/comprar">COMPRAR </a><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3 cursor-pointer mt-0.5">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+</svg>
+</li>
              <li class="hover:text-orange-500"><a href="/eventos">EVENTOS</a></li>
-             <li class="hover:text-orange-500"><a href="">SOBRE NOSOTROS</a></li>
+             <li class="hover:text-orange-500"><a href="/sobre-nosotros">SOBRE NOSOTROS</a></li>
              <li class="hover:text-orange-500"><a href="/contacto">CONTACTO</a></li>
            </ul>
          </div>
@@ -229,7 +241,7 @@ const createNavbarAdmin = () => {
      <ul class="flex flex-col justify-center text-left gap-6 text-xl text-orange-50 font-semibold">
        <li class=""><a href="/comprar">COMPRAR</a></li>
        <li class=""><a href="/eventos">EVENTOS</a></li>
-       <li class=""><a href="">SOBRE NOSOTROS</a></li>
+       <li class=""><a href="/sobre-nosotros">SOBRE NOSOTROS</a></li>
        <li class=""><a href="/contacto">CONTACTO</a></li>
      </ul>
    </div>

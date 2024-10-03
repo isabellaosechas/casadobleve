@@ -1,6 +1,9 @@
 
 const mongoose = require('mongoose');
 const pagoSchema = new mongoose.Schema({
+    user: {
+        type: mongoose.Schema.Types.ObjectId, ref: 'Order',
+    },
     banco: String,
     telefono: String,
     ref: String,

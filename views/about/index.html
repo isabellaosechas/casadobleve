@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="/images/logo.png" type="image/x-icon">
+   <script src="https://cdn.tailwindcss.com"></script>
+   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+   <title>Casadobleve || Sobre nosotros</title>
+</head>
+<body class="bg-orange-50">
+     <!-- Banner -->
+     <div id="banner" class="flex gap-4 z-10 flex-col items-center overflow-hidden relative justify-center text-center bg-[#E7782D] text-orange-50 px-6 py-2 top-0">
+        <marquee behavior="scroll" scrollamount="5" class="text-xs">✹ ENVIOS NACIONALES GRATIS A PARTIR DE 120$ ✹ ENVIO GRATIS EN TU PRIMER HOMEKIT ✹ ENVIOS NACIONALES GRATIS A PARTIR DE 120$ ✹ ENVIO GRATIS EN TU PRIMER HOMEKIT ✹ </marquee>
+    </div>
+    <!-- Nav Bar -->
+     <nav id="navbar" class="sticky z-10 section-x-padding flex flex-row items-center justify-between py-2 left-0 right-0 bg-orange-50 text-black text-sm max-w-full mx-auto border border-b-1 border-[#d6c7b6]">  
+     </nav>
+     <!-- Main content -->
+     <section class="text-gray-600 mx-auto max-w-7xl body-font">
+      <div class="container flex justify-center px-5 py-12 md:flex-row flex-col items-center">
+          <div
+              class="md:w-1/2 lg:ml-12 md:pr-8 flex flex-col md:items-start md:text-left mb-16">
+              <p>Encantados de conocerte!</p>
+              <h1 class="title-font sm:text-4x font-serif text-3xl mb-4 font-medium text-gray-900">Sobre <span class="">nosotros</span>
+              </h1>
+              <div class="lg:pr-12 flex flex-col justify-center">
+                <p class="mb-2 text-sm leading-relaxed">Casadoblevé es un proyecto que experimenta constantemente con formas y colores de una manera inusual en el mundo de la ceramica. El objetivo es llevar a los espacios vida y personalidad a través de piezas únicas hechas a mano.</p>
+                <hr class="my-6 h-0.5 border-t-0 bg-[#EBDFD2]" />
+              <p class="lg:mb-8 text-sm leading-relaxed">Con formación en diseño de moda y una pasión por el arte y el interiorismo, mi conexión con la cerámica fue instantánea. El barro me permite dar rienda suelta a mi imaginación para crear mientras que los pigmentos me permiten hacer de la cerámica un lienzo perfecto.</p>
+              </div>
+              
+              
+          </div>
+          <div class="lg:max-w-lg items-center flex justify-center lg:w-full ">
+              <img class="object-cover object-center rounded lg:h-[417px] w-[340px] "alt="hero" src="/images/whendala.jpeg">
+          </div>
+      </div>
+    </section>
+  <!-- Features section -->
+   <section class="mx-auto max-w-full items-center flex justify-center"  >
+  <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:gap-20 gap-4 text-gray-800 px-4">
+
+    <article class="flex flex-col self-stretch my-auto min-w-[240px] w-[330px]">
+      <div class="flex relative flex-col px-8 py-9 w-full aspect-[1.833] max-md:px-5 bg-[url('/images/yellow.png')] bg-no-repeat bg-center)">
+        <h2 class="relative text-center text-lg font-bold rotate-[0.0010086565968977447rad]">
+          Hecho en Venezuela
+        </h2>
+        <p class="relative mt-3 text-s text-center rotate-[0.0010086565968977447rad]">
+          Estamos en Caracas, Venezuela donde nuestras piezas son diseñadas con amor por Whendala Arias
+        </p>
+      </div>
+    </article>
+
+    <article class="flex flex-col self-stretch my-auto min-w-[240px] w-[330px]">
+      <div class="flex relative flex-col px-8 py-9 w-full aspect-[1.833] max-md:px-5 bg-[url('/images/green.png')] bg-no-repeat bg-center">
+        <h2 class="relative self-center text-lg font-bold rotate-[0.0010086565968977447rad]">
+          Cuidado y pasión
+        </h2>
+        <p class="relative mt-3.5 text-s text-center rotate-[0.0010086565968977447rad]">
+          Nos dedicamos a elaborar productos que perduren en el tiempo. Cada pieza es el resultado de un proceso consciente
+        </p>
+      </div>
+    </article>
+
+    <article class="flex flex-col self-stretch my-auto min-w-[240px] w-[330px]">
+      <div class="flex relative flex-col px-7 py-8 w-full aspect-[1.833] max-md:px-5 bg-[url('/images/orange.png')] bg-no-repeat bg-center">
+        <h2 class="relative text-lg text-center font-bold rotate-[0.0009378005656597005rad]">
+          Celebramos la creatividad
+        </h2>
+        <p class="relative self-center mt-1.5 text-s text-center rotate-[0.0009378005656597005rad]">
+          Tu visión importa. fomentamos la creatividad de nuestros clientes, proporcionamos las herramientas y el espacio para que tu imaginación vuele.
+        </p>
+      </div>
+    </article>
+    
+  </div>
+  </section>
+  <!-- Contact section -->
+ <section id="contact-section" class="bg-[#C0DDE2] flex mt-16 items-center justify-center text-center text-black px-6 py-2 right-0 left-0">
+</section>
+<!-- Footer -->
+<section id="footer" class="bg-[#C9C26B] flex items-center justify-center text-center text-orange-50 px-6 py-2 right-0 left-0 mx-auto">
+</section>
+<script type="module" src="/components/navbar.js"></script>
+<script type="module" src="../components/contact.js"></script>
+<script type="module" src="../components/footer.js"></script>
+
+<!-- <script type="module" src="index.js"></script> -->
+</body>
+
+</html>

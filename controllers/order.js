@@ -40,7 +40,7 @@ ordersRouter.post('/', async (request, response) => {
 ordersRouter.get('/:id', async (request, response) => {
     const orderId = request.params.id;
     try {
-      const order = await Order.findById(orderId).populate('products');
+      const order = await Order.findById(orderId).populate('products')
       if (order) {
         return response.json(order);
       } else {
