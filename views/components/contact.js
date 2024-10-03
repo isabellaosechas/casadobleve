@@ -4,7 +4,7 @@ const createContactSection = () => {
     contactSection.innerHTML=`
     <div class="flex flex-col py-12">
     <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium font-serif text-gray-900">
-    ¿Tienes una <span class="text-orange-500">idea</span> o una <span class="text-[#E8AD3E]">pregunta</span>?
+    ¿Tienes una idea o una pregunta?
 </h1>
 <h3 class="mb-8 leading-relaxed">
   ¡Queremos escuharte!
