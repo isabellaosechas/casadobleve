@@ -19,8 +19,64 @@
     
 
      <!-- Contenido -->
+
+      <!-- Filtrar -->
+      <section id="filters">
+        <div id="filtros" class="max-w-full mx-auto flex flex-row items-center bg-[#C0DDE2] py-5">
+          <div class="mx-auto flex justify-between gap-24 ">
+            <div id="filtrar-seccion" class="align-bottom">
+             <form id="form-filter" class="max-w-2xl flex flex-col items-start">
+                <div class="flex items-start flex-row gap-4">
+                  <label class="cursor-pointer">
+                      <input type="radio" class="peer sr-only tag-checked" name="categoria" value="plato" />
+                      <div class="peer-checked:border-black border border-[#C0DDE2] px-3 py-1">
+                        <p>Platos </p>
+                      </div>
+                    </label>
+
+                    <label class="cursor-pointer">
+                      <input type="radio" class="peer sr-only tag-checked" name="categoria" value="portavaso" />
+                      <div class="border peer-checked:border-black border-[#C0DDE2]  px-3 py-1">
+                        <p>Portavasos </p>
+                      </div>
+                    </label>
+
+                    <label class="cursor-pointer">
+                      <input type="radio" class="peer sr-only tag-checked" name="categoria" value="jarron" />
+                      <div class="border peer-checked:border-black border-[#C0DDE2] px-3 py-1">
+                        <p>Jarrones </p>
+                      </div>
+                    </label>
+
+                    <label class="cursor-pointer">
+                      <input type="radio" class="peer sr-only tag-checked" name="categoria" value="personalizado"/>
+                      <div class="border peer-checked:border-black border-[#C0DDE2] px-3 py-1 border-">
+                        <p>Personalizados </p>
+                      </div>
+                    </label>
+                </div>
+            </form> 
+            </div>
+            <div id="buscar">
+              <form id="search-form" class="flex flex-col justify-center">
+                <div class="flex justify-center">
+                    <input id="search-input" type="text" placeholder="Buscar producto"
+                     class="w-2/3 md:w-full px-2 placeholder:text-black placeholder:text-sm h-10 bg-transparent text-black border-black border-b focus:outline-none"
+                     >
+                    <button type="submit" class="bg-transparent px-2 md:px-3 py-0 md:py-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>
+                    </button>
+                </div>
+            </form>  
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Productos -->
      <section>
-    <ul  id="products"  class="w-fit mx-auto grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 justify-items-center justify-center mt-4">
+    <ul  id="products"  class="w-fit mx-auto grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 justify-items-center justify-center">
     </ul>
     </section>
 

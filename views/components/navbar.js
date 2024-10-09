@@ -17,10 +17,7 @@ const createNavbarClient = () => {
         <!--navbar Desktop  -->
          <div>
            <ul class="hidden md:flex flex-row gap-4 text-xs font-semibold">
-             < <li class="hover:text-orange-500 flex flex-row gap-1"><a href="/comprar">COMPRAR </a><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3 cursor-pointer mt-0.5">
- <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-</svg>
-</li>
+             <li class="hover:text-orange-500 "><a href="/comprar">COMPRAR </a></li>
              <li class="hover:text-orange-500"><a href="/eventos">EVENTOS</a></li>
              <li class="hover:text-orange-500"><a href="/sobre-nosotros">SOBRE NOSOTROS</a></li>
              <li class="hover:text-orange-500"><a href="/contacto">CONTACTO</a></li>
@@ -95,10 +92,7 @@ const createNavbarUser = () => {
          <!--navbar Desktop  -->
           <div>
             <ul class="hidden md:flex flex-row gap-4 text-xs font-semibold">
-              < <li class="hover:text-orange-500 flex flex-row gap-1"><a href="/comprar">COMPRAR </a><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3 cursor-pointer mt-0.5">
-  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-</svg>
-</li>
+              < <li class="hover:text-orange-500 flex flex-row gap-1"><a href="/comprar">COMPRAR </a></li>
               <li class="hover:text-orange-500"><a href="/eventos">EVENTOS</a></li>
               <li class="hover:text-orange-500"><a href="/sobre-nosotros">SOBRE NOSOTROS</a></li>
               <li class="hover:text-orange-500"><a href="/contacto">CONTACTO</a></li>
