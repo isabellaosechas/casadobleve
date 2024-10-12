@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/images/logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Casadobleve | Home</title>
+    <style>
+      .swiper-wrapper {
+      width: 100%;
+      height: max-content !important;
+      padding-bottom: 64px !important;
+      -webkit-transition-timing-function: linear !important;
+      transition-timing-function: linear !important;
+      position: relative;
+      }
+      .swiper-pagination-bullet {
+      background: #d3c5ad;
+      }
+      .swiper-pagination-bullet-active {
+      background: #d3c5ad !important;
+      }
+    </style>
 </head>
 <body class="bg-[#FCF4EA]">
     <!-- Banner -->
@@ -16,6 +34,10 @@
     <!-- Nav Bar -->
      <nav id="navbar" class="sticky z-10 section-x-padding flex flex-row items-center justify-between py-2 left-0  border border-b-1 border-[#d6c7b6] right-0 bg-orange-50 text-black text-sm max-w-full mx-auto">  
      </nav>
+
+     <!-- Whatsapp -->
+     <div id="wpp" class="z-10 fixed right-5 bottom-8">
+    </div>
      
     <!-- Hero Section -->
     <section class="bg-[url('/images/hero.png')] bg-cover bg-center bg-no-repeat">
@@ -81,9 +103,44 @@
               <button class="ml-4 inline-flex text-black shadow outline font-medium outline-1 outline-black py-1 px-4 md:px-8 hover:bg-gray-200 text-sm">VER EVENTOS</button>
           </div>
       </div>
-      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-          <img class="object-cover object-center rounded" alt="hero" src="/images/clients.jpg">
-      </div>
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-full">
+      <!-- CARRUSEL -->
+           <!--HTML CODE-->
+      <div class="w-full relative ">
+        <div class="swiper centered-slide-carousel swiper-container relative ">
+        <div class="swiper-wrapper">
+         <div class="swiper-slide">
+           <div class="rounded-2xl h-96 flex justify-center items-center">
+            <img src="/images/clients.jpg" alt="">
+           </div>
+         </div>
+         <div class="swiper-slide">
+           <div class="rounded-2xl h-96 flex justify-center items-center">
+            <img src="/images/Snoopy.jpg" alt="">
+           </div>
+         </div>
+         <div class="swiper-slide">
+           <div class="rounded-2xl h-96 flex justify-center items-center">
+            <img src="/images/Coloring.jpg" alt="">
+           </div>
+         </div>
+         <div class="swiper-slide">
+           <div class="rounded-2xl h-96 flex justify-center items-center">
+            <img src="/images/mugcarousel.png" alt="">
+           </div>
+         </div>
+         <div class="swiper-slide">
+           <div class="rounded-2xl h-96 flex justify-center items-center">
+            <img src="/images/platocarousel.png" alt="">
+           </div>
+         </div>
+        </div>
+        <div class="swiper-pagination "></div>
+        </div>
+        </div>
+      </div> 
+      
+        
   </div>
 </section>
 <!-- Home kits -->
@@ -113,7 +170,40 @@
  <!-- Footer -->
  <section id="footer" class="bg-[#C9C26B] flex items-center justify-center text-center text-orange-50 px-6 py-2 right-0 left-0 mx-auto">
  </section>
+   <script>
+      //CARRUSEL RESPONSIVE
+      var swiper = new Swiper(".centered-slide-carousel", {
+       centeredSlides: true,
+       paginationClickable: true,
+       loop: true,
+       spaceBetween: 30,
+       slideToClickedSlide: true,
+       autoplay: {
+        delay: 3000,
+        disableOnInteraction: true,
+      },
+       pagination: {
+         el: ".centered-slide-carousel .swiper-pagination",
+         clickable: true,
+       },
+       breakpoints: {
+         1920: {
+           slidesPerView: 1,
+           spaceBetween: 0
+         },
+         1028: {
+           slidesPerView: 1,
+           spaceBetween: 0
+         },
+         990: {
+           slidesPerView: 1,
+           spaceBetween: 0
+         }
+       }
+      });
+      </script>
  <script type="module" src="../components/navbar.js"></script>
+ <script type="module" src="../components/whatsapp.js"></script>
  <script type="module" src="../components/contact.js"></script>
  <script type="module" src="../components/footer.js"></script>
  <script>
